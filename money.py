@@ -18,13 +18,22 @@ class Currency:
         - symbol - optional symbol used to designate currency
         - digits -- number of significant digits used
         """
-        pass
+        self.name=name
+        self.code=code
+        self.symbol=symbol
+        self.digits=digits
 
     def __str__(self):
         """
+      
         Should return the currency code, or code with symbol in parentheses.
         """
-        pass
+        if self.symbol:
+          return f"{self.code}({self.symbol})"
+        else:
+          return f"{self.code}"
+
+        
 
     def __eq__(self, other):
         """
@@ -46,7 +55,8 @@ class Money:
         - amount -- quantity of currency
         - currency -- type of currency
         """
-        pass
+        self.amount=amount
+        self.currency=currency
 
     def __str__(self):
         """
